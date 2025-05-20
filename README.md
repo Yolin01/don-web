@@ -35,7 +35,7 @@ Il faut installer Xampp ou Wamp pour naviguer localement
 
 ### 1) Cloner le dépôt
 ```bash
-git clone https://github.com/Yolin01/don-app.git
+git clone https://github.com/Yolin01/don-web.git
 ```
 
 ### 2) Déplacer le projet dans le bon dossier :
