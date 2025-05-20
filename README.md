@@ -11,7 +11,7 @@ L’objectif principal est de simuler un système de collecte de dons fonctionne
 - Vérification et enregistrement des données avec PHP
 - Stockage des informations dans une base de données MySQL
 - Page de confirmation du don
-- Historique des dons (exemple de visualisation)
+- Historique des dons 
 - Interface HTML/CSS simple et claire
 
 ## PRÉREQUIS :
