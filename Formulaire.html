@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Méthode de paiement</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #00ba1f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            width: 50%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .instructions {
+            display: none;
+            background: #e9ecef;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Faisons du bien pour les futures générations</h1>
+        <nav class="navbar">
+            <a href="index.html">Accueil</a>
+            <a href="Contact.html">Contact</a>
+            <a href="Apropos.html">À propos</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Effectuer un don</h2>
+        <form action="process.php" method="POST">
+            
+                 <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" placeholder="Entrez votre nom complet" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" placeholder="Entrez votre adresse mail" required>
+
+                <label for="amount">Montant (en Ar) :</label>
+                <input type="number" id="amount" name="amount" placeholder="Entrez le montant" required>
+           
+            <label for="payment">Méthode de paiement :</label>
+            <select id="payment" name="payment" onchange="afficherInstructions()">
+                <option value="">-- Sélectionnez une option --</option>
+                <option value="orange">Orange Money</option>
+                <option value="mvola">Mvola</option>
+                <option value="airtel">Airtel Money</option>
+            </select>
+
+            <!-- Instructions de paiement dynamiques -->
+            <div id="instruction-orange" class="instructions">
+                <p>Si vous voulez faire un transfert via <b>Orange Money</b>, veuillez copier :</p>
+                <p>#144*1*1*0326948294*0326948294*Montant(en AR)*1*Votre code secret#</p>
+            </div>
+
+            <div id="instruction-mvola" class="instructions">
+                <p>Si vous voulez faire un transfert via <b>Mvola</b>, veuillez copier :</p>
+                <p>#111*1*2*0342649332*Montant(en Ar)*1*332*Votre code secret#</p>
+            </div>
+
+            <div id="instruction-airtel" class="instructions">
+                <p>Si vous voulez faire un transfert via <b>Airtel Money</b>, veuillez copier :</p>
+                <p>#123*1*1*0331234567*Montant(en Ar)*1*Votre code secret#</p>
+            </div>
+
+            <label for="reference">Référence de la transaction :</label>
+            <input type="text" id="reference" name="reference" placeholder="Entrez la référence de la transaction" required>
+
+            <section class="btn-container">
+                 <button type="submit" class="btn">Valider le don</button>
+                 <a href="Historique.php" class="btn">📜 Voir l'historique des dons</a>
+            </section>
+
+            
+        </form>
+    </main>
+
+    <script>
+        function afficherInstructions() {
+            // Récupérer la valeur sélectionnée
+            var paiement = document.getElementById("payment").value;
+            
+            // Cacher toutes les instructions
+            document.getElementById("instruction-orange").style.display = "none";
+            document.getElementById("instruction-mvola").style.display = "none";
+            document.getElementById("instruction-airtel").style.display = "none";
+
+            // Afficher uniquement l'instruction correspondante
+            if (paiement === "orange") {
+                document.getElementById("instruction-orange").style.display = "block";
+            } else if (paiement === "mvola") {
+                document.getElementById("instruction-mvola").style.display = "block";
+            } else if (paiement === "airtel") {
+                document.getElementById("instruction-airtel").style.display = "block";
+            }
+        }
+    </script>
+    <footer class="footer">
+        <p>© 2025 - Site de donation pour l'École Supérieure Polytechnique</p>
+    </footer>
+    
+</body>
+</html>

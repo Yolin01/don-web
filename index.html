@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accueil</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Préparons les terrains pour les générations futures </h1>
+    <nav class="navbar">
+      <a href="index.html">Accueil</a>
+      <a href="Contact.html">Contact</a>
+      <a href="Apropos.html">À propos</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="intro">
+      <p>
+        Bonjour à vous !<br><br>
+        Bienvenue sur notre site de dons.<br><br>
+        Notre objectif est de collecter des fonds pour la rénovation de notre amphithéâtre.  
+        Autrefois, il était en excellent état et envié par d’autres écoles.  
+        Aujourd’hui, il est malheureusement en mauvais état.  
+        Ensemble, nous allons unir nos forces pour restaurer ce lieu emblématique,  
+        afin que les générations futures puissent en profiter comme nous l’avons fait.  
+      </p>
+
+      <!-- Carrousel d'images -->
+      <div class="carousel">
+        <button class="carousel-btn prev" onclick="moveSlide(-1)">⬅️</button>
+
+        <div class="carousel-track-container">
+          <div class="carousel-track" id="carousel-track">
+            <img src="images/Porte.jpg" alt="Porte" />
+            <img src="images/Entrée.jpg" alt="Entrée" />
+            <img src="images/Plafond.jpg" alt="Plafond" />
+            <img src="images/Exterieur.jpg" alt="Extérieur" />
+          </div>
+        </div>
+
+        <button class="carousel-btn next" onclick="moveSlide(1)">➡️</button>
+      </div>
+
+      <h3>Ensemble, nous pouvons y arriver ! 💪</h3>
+    </section>
+
+    <section class="btn-container">
+      <a href="Formulaire.html" class="btn">🤝 Participer au don</a>
+      <a href="Historique.php" class="btn">📜 Voir l'historique des dons</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 - Site de donation pour l'École Supérieure Polytechnique</p>
+  </footer>
+
+  <!-- Script JS -->
+  <script>
+    let currentIndex = 0;
+
+    function moveSlide(direction) {
+      const track = document.getElementById('carousel-track');
+      const slides = track.children;
+      const totalSlides = slides.length;
+
+      currentIndex += direction;
+
+      if (currentIndex < 0) currentIndex = totalSlides - 1;
+      if (currentIndex >= totalSlides) currentIndex = 0;
+
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+  </script>
+</body>
+</html>

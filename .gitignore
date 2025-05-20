@@ -1,0 +1,14 @@
+# Fichiers sensibles
+bdd.php
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Config éditeurs
+.vscode/
+.idea/
+
+# Logs ou fichiers temporaires
+*.log
+*.tmp

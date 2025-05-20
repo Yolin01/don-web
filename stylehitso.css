@@ -1,0 +1,47 @@
+body { 
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; 
+    text-align: center; 
+    margin: 20px; 
+}
+.container { 
+    width: 90%; 
+    max-width: 1000px; 
+    margin: auto; 
+    background: white; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+.search-bar { 
+    margin-bottom: 15px; 
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; }
+input[type="text"] { 
+    padding: 8px; 
+    width: 200px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; }
+table {
+    width: 100%; 
+    margin-top: 10px; 
+    border-collapse: collapse; }
+th, td { 
+    padding: 12px; 
+    border: 1px solid #ddd; 
+    text-align: center; }
+th { background-color: #007bff; 
+    color: white; }
+.pagination { margin-top: 15px; 
+    display: flex; 
+    justify-content: center; 
+    gap: 5px; }
+.pagination a { 
+    padding: 5px 10px; 
+    text-decoration: none; 
+    background: #007bff; 
+    color: white; 
+    border-radius: 3px; }
+.pagination a:hover, .pagination a.active { 
+    background-color: #0056b3; 
+    font-weight: bold; }
