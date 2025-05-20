@@ -95,7 +95,7 @@ Historique.php             # Affichage des dons
 process.php                # C’est ici le processus qui traite les informations via formulaire et la requête pour insérer les informations dans la base de donnée
 README.md                  # lisez moi
 stylehitso.css             # Style css pour les historiques
-styles.css                 # Style css pour mes projets y compris historique
+styles.css                 # Style css principal de la site
 Images/                    # Images
     Entrée.jpg 
     Exterieur.jpg
