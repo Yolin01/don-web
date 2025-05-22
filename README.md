@@ -39,8 +39,8 @@ git clone https://github.com/Yolin01/don-web.git
 ```
 
 ### 2) Déplacer le projet dans le bon dossier :
-- XAMPP: `C:/xampp/htdocs/don/`
-- WAMP: `C:/wamp/www/don/`
+- XAMPP: `C:/xampp/htdocs/Don/`
+- WAMP: `C:/wamp/www/Don/`
 
 ### CONFIGURATION DE LA BASE DE DONNÉES
 - Démarrer Apache et MySQL depuis votre logiciel (XAMPP, WAMP, etc.)
